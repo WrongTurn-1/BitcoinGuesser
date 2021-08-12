@@ -1,10 +1,10 @@
 # BitcoinGuesser
-This is how I scan for 600million bitcoin addresses per hour, a guide
+This is how I scan for 600million bitcoin addresses per hour on an i5 8 cores, a guide
 
 SUMMARY:
-Pipe Bip39Helper into brainflayer
-I have 8 cores on an i5, so I'm running it 7 times simultaneously.
-I'm a total scriptkiddy, so improvements welcome!
+Pipe Bip39Helper into brainflayer...
+I have 8 cores on an i5, so I'm running it 7 times simultaneously...
+I'm a total scriptkiddy, so improvements welcome!...
 
 ##### IN DETAIL:
 #####  
@@ -44,3 +44,11 @@ cut -d, -f 4 btc_balance_sorted.csv > btc_h160.txt  ---  notes on this here: htt
 
 16) Now, run like this, and it permanently loops:
 17)   me@Ubuntu:~/Desktop/BTC$ /home/ubuntu/Desktop/BTC/RUNME.sh
+
+##### NOTES
+If it finds a collision it should beep, and the keys are saved to /brainflayer/foundkeysALL.txt
+Double check the cat command uses >> so it is appending an extra line to the file and NOT > otherwise any previous details are being overwritten, and you would find a key only to overwrite it the next loop.
+...message dumb questions to me at firstnamesurname@protonmail
+##### Question
+Why have you copied the Bip39Helper script 7 times?
+I have some bug which means Bip39Helper will only write to a file called 12words.txt, give it any other name and the output file is always blank! So i couldnt just call the script 7 times and have 7 different named outputs. Not sure why, it worked normally once, and I've given up trying to fix it.

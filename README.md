@@ -32,11 +32,14 @@ cut -d, -f 4 btc_balance_sorted.csv > btc_h160.txt  ---  notes on this here: htt
 ./hex2blf btc_h160.txt btc_h160.blf
 
 --- you can do a quick test of brainflayer, make a small wordlist.txt in the brainflayer folder and run> ./brainflayer -v -b btc_h160.blf -i wordlist.txt
-6) copy the wordlist from Bip39Helper into the BTC folder. I run the program from the /BTC location everytime and it likes to reference wordlist.txt in its current folder
-7) cd /Bip39Helper-1.02a  ---  we need to make the file with this command:
-8) /Bip39Helper-1.02a$    gcc -v -Os -I /usr/include/python2.7/ -L /usr/local/lib/python2.7/ -o biphelper-102a-LinuxX64 biphelper-102a-LinuxX64.c -lpython2.7 -lpthread -lm -lutil -ldl
-9) Give the main file execution permissions, right click on biphelper-102a-LinuxX64 and select Permission and tick the box "allow executing"
-10) Then make six copies of this folder, I have /Bip39Helper-1.02a and /Bip39Helper-1.02a_1 and /Bip39Helper-1.02a_2 ... /Bip39Helper-1.02a_6 all inside the BTC folder.
-11) copy my bash script called RUNME.sh here to BTC/
-12) Now, run like this, and it permanently loops:
-13)   me@Ubuntu:~/Desktop/BTC$ /home/ubuntu/Desktop/BTC/RUNME.sh
+7) copy the wordlist from Bip39Helper into the BTC folder. I run the program from the /BTC location everytime and it likes to reference wordlist.txt in its current folder
+8) 
+9) cd /Bip39Helper-1.02a  ---  we need to make the file with this command:
+10) /Bip39Helper-1.02a$    gcc -v -Os -I /usr/include/python2.7/ -L /usr/local/lib/python2.7/ -o biphelper-102a-LinuxX64 biphelper-102a-LinuxX64.c -lpython2.7 -lpthread -lm -lutil -ldl
+11) 
+12) Give the main file execution permissions, right click on biphelper-102a-LinuxX64 and select Permission and tick the box "allow executing"
+13) Then make six copies of this fol14) der, I have /Bip39Helper-1.02a and /Bip39Helper-1.02a_1 and /Bip39Helper-1.02a_2 ... /Bip39Helper-1.02a_6 all inside the BTC folder.
+15) copy my bash script called RUNME.sh here to BTC/
+16) 
+17) Now, run like this, and it permanently loops:
+18)   me@Ubuntu:~/Desktop/BTC$ /home/ubuntu/Desktop/BTC/RUNME.sh

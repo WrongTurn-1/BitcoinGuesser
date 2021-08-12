@@ -28,7 +28,7 @@ IN DETAIL:
 6)
 # next you need to turn your downloaded BTC addresses into a blf for faster checking, 
 cd /brainflayer
-cut -d, -f 4 btc_balance_sorted.csv > btc_h160.txt  # notes on this here: https://www.bitkeys.work/download.php
+cut -d, -f 4 btc_balance_sorted.csv > btc_h160.txt  # notes on this here: https://www.bitkeys.work/download.php \n
 ./hex2blf btc_h160.txt btc_h160.blf
 
 # you can do a quick test of brainflayer, make a small wordlist.txt in the brainflayer folder and run> ./brainflayer -v -b btc_h160.blf -i wordlist.txt

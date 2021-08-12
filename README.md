@@ -37,6 +37,6 @@ cut -d, -f 4 btc_balance_sorted.csv > btc_h160.txt  # notes on this here: https:
 8) /Bip39Helper-1.02a$    gcc -v -Os -I /usr/include/python2.7/ -L /usr/local/lib/python2.7/ -o biphelper-102a-LinuxX64 biphelper-102a-LinuxX64.c -lpython2.7 -lpthread -lm -lutil -ldl
 9) Give the main file execution permissions, right click on biphelper-102a-LinuxX64 and select Permission and tick the box "allow executing"
 10) Then make six copies of this folder, I have /Bip39Helper-1.02a and /Bip39Helper-1.02a_1 and /Bip39Helper-1.02a_2 ... /Bip39Helper-1.02a_6 all inside the BTC folder.
-11) copy my bash script here to BTC
+11) copy my bash script called RUNME.sh here to BTC/
 12) Now, run like this, and it permanently loops:
 13)   me@Ubuntu:~/Desktop/BTC$ /home/ubuntu/Desktop/BTC/RUNME.sh

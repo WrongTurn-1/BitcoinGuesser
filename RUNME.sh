@@ -83,13 +83,6 @@ wait
 echo "Finished brainflayer ALL"
 echo $(date +"%r")
 
-###
-
-echo all hashing processes complete x private addresses tested
-echo $(date +"%r")
-
-echo "KEYTEST" >> /home/ubuntu/Desktop/BTC/brainflayer/foundkeys3.txt
-
 ## Archive all positive results so they are not written over next loop, ammend file not overwrite:
 cat /home/ubuntu/Desktop/BTC/brainflayer/foundkeys0.txt >> /home/ubuntu/Desktop/BTC/brainflayer/foundkeysALL.txt
 cat /home/ubuntu/Desktop/BTC/brainflayer/foundkeys1.txt >> /home/ubuntu/Desktop/BTC/brainflayer/foundkeysALL.txt
@@ -107,10 +100,14 @@ if [ -s /home/ubuntu/Desktop/BTC/brainflayer/foundkeysALL.txt ]
 then
 	echo "filename exists and is > 0 bytes"
 	echo "FOUND SOMETHING, FOUND SOMETHING"
+	echo "FOUND SOMETHING, FOUND SOMETHING"
+	echo "				FOUND SOMETHING, FOUND SOMETHING"
+	echo "								FOUND SOMETHING, FOUND SOMETHING"
 	echo $(date +"%r")
 			# play an annoying sound if an address is found
 	speaker-test -t sine -f 1000 -l 1 & sleep .8 && kill -9 $!
 	echo -ne '\007'
+	# exit program when somthing found
 	exit
 else
 	echo " "
@@ -145,7 +142,7 @@ echo " ///////////////////////////////////////////////////////////////////////"
 echo " "
 echo "************************************************************************"
 
-# Permanent Loop
+# repeat loop if nothing found
 /home/ubuntu/Desktop/BTC/RUNME2.sh
 
 
